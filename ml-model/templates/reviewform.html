@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bridge review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <form class="form-inline" action="/action_page.php">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">@</span>
+      </div>
+      <input type="text" class="form-control" placeholder="Username">
+    </div>
+  </form>
+</nav>
+
+<h4><center>Enter your feedback:</center></h4>
+<hr>
+{% from "_formhelpers.html" import render_field %}
+
+<center><form method=post action="/results"  class="form-group">
+  <dl > 
+	{{ render_field(form.moviereview, cols='40', rows='10') }}
+  </dl>
+  <div>
+	 <center> <input type="submit" class="btn btn-primary" value='Submit review' name='submit_btn'> </center>
+  <!-- <input type=submit value='Submit review' name='submit_btn'>-->
+  </div>
+</form></center>
+
+
+<!--<div class="form-group">
+      <label for="comment">Comment:</label>
+      <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+    </div>
+    <input type="submit" class="btn btn-primary" value='Submit review' name='submit_btn'>-->
+
+  </body>
+</html>

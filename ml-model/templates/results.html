@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bridge</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" type="css/text" href="/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body color='red'>
+
+<center><h3 stylesheet: color="red"> Service Feed back:</h3>
+<div>{{ content }}</div></center>
+<hr>
+
+<center><h3>Prediction:</h3></center>
+<center><div id="pre">The Bridge Social Media feedback <br> <strong>{{ prediction }}</strong>
+	 (probability: {{ probability }}%).</div></center>
+
+<br></br>
+
+<center><div id='button'>
+	  <form action="/">
+    <button class="btn btn-primary" type=submit class="btn btn-primary" value='Submit another review' name='submit_btn'>
+  <span class="spinner-grow spinner-grow-sm"></span>
+  Heck it ...
+</button>
+	    <!--<input type=submit class="btn btn-primary" value='Submit another review' name='submit_btn'>
+      <input type=submit class="btn btn-primary" value='Submit another review'>-->
+	  </form>
+</div></center>
+<hr>
+
+  </body>
+</html>
